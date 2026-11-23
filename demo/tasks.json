@@ -1,0 +1,27 @@
+{
+  "sandbox_files": [
+    {"path": "sandbox/notes/meeting.md", "text": "# 周会要点\n\n- 周三前完成记忆层索引\n- 技能蒸馏需要至少两条成功轨迹\n- 下轮补失败路径的回归测试\n"},
+    {"path": "sandbox/notes/idea.md", "text": "# 想法\n\n把重复的清点动作沉淀成技能，第二次就不用再走两步行。\n"},
+    {"path": "sandbox/notes/todo.md", "text": "# 待办\n\n1. 写 AGENT.md\n2. 跑 demo\n3. 推仓库\n"},
+    {"path": "sandbox/reports/week1.md", "text": "# 第一周\n\n完成工具层与记忆层骨架。\n"},
+    {"path": "sandbox/reports/week2.md", "text": "# 第二周\n\n完成规划器与循环层，跑通首个端到端任务。\n"},
+    {"path": "sandbox/reports/week3.md", "text": "# 第三周\n\n加入技能蒸馏与失败语义。\n"},
+    {"path": "sandbox/reports/summary.md", "text": "# 汇总\n\n三周共完成五层架构的骨架实现。\n"},
+    {"path": "sandbox/logs/run1.log", "text": "INFO start\nINFO plan inventory_record\nINFO done 2 steps\n"},
+    {"path": "sandbox/logs/run2.log", "text": "INFO start\nWARN skill not found\nINFO done 2 steps\n"},
+    {"path": "sandbox/archive/old.md", "text": "# 归档\n\n旧版只做了单轮问答，没有记忆。\n"},
+    {"path": "sandbox/archive/older.md", "text": "# 更早\n\n最初的脚本连沙箱都没有。\n"}
+  ],
+  "acts": [
+    {"id": 1, "kind": "task", "label": "写入语义记忆：把负责人记成 Leo", "task": "记住 C10 的负责人是 Leo"},
+    {"id": 2, "kind": "task", "label": "下一个回合回忆这条事实（跨回合记忆）", "task": "回忆 C10 的负责人"},
+    {"id": 3, "kind": "task", "label": "第一次清点 notes —— 还没有对应技能，走规划器两步", "task": "清点 sandbox/notes 并记录"},
+    {"id": 4, "kind": "task", "label": "第二次清点 reports —— 同型任务，仍是两步（技能尚未生成）", "task": "清点 sandbox/reports 并记录"},
+    {"id": 5, "kind": "evolve", "min_support": 2, "label": "进化：把两条同型成功轨迹蒸馏成一个技能"},
+    {"id": 6, "kind": "task", "label": "第三次清点 logs —— 应命中新技能，agent 只走一步", "task": "清点 sandbox/logs 并记录"},
+    {"id": 7, "kind": "task", "label": "第四次清点 archive —— 技能复用验证", "task": "清点 sandbox/archive 并记录"},
+    {"id": 8, "kind": "task", "label": "声明式技能：工作区概览", "task": "工作区概览"},
+    {"id": 9, "kind": "task", "label": "代码式技能：摘要一个文件", "task": "摘要 sandbox/notes/meeting.md"},
+    {"id": 10, "kind": "task", "label": "失败路径：读一个不存在的文件（如实记录失败，不编造成功）", "task": "读 sandbox/notes/ghost.md"}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "auto_fs_list_mem_write",
+  "description": "自动蒸馏技能：按顺序执行 fs_list -> mem_write，由 2 条历史成功轨迹归纳",
+  "params": {
+    "path": {
+      "type": "string",
+      "example": "sandbox/reports"
+    }
+  },
+  "triggers": [
+    "清点",
+    "并记录"
+  ],
+  "sequence": [
+    {
+      "tool": "fs_list",
+      "args": {
+        "path": {
+          "$param": "path"
+        }
+      }
+    },
+    {
+      "tool": "mem_write",
+      "args": {
+        "predicate": "file_count",
+        "subject": {
+          "$param": "path"
+        },
+        "value": {
+          "$prev": "count"
+        }
+      }
+    }
+  ]
+}

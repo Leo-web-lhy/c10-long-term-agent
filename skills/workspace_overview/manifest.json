@@ -1,0 +1,26 @@
+{
+  "name": "workspace_overview",
+  "description": "清点整个工作区文件数并写入语义记忆（声明式技能示例：只有序列，没有代码）",
+  "params": {},
+  "triggers": [
+    "工作区概览"
+  ],
+  "sequence": [
+    {
+      "tool": "fs_list",
+      "args": {
+        "path": "."
+      }
+    },
+    {
+      "tool": "mem_write",
+      "args": {
+        "subject": "workspace",
+        "predicate": "file_count",
+        "value": {
+          "$prev": "count"
+        }
+      }
+    }
+  ]
+}

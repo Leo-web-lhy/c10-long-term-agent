@@ -1,0 +1,11 @@
+{
+  "name": "doc_digest",
+  "description": "读取一个文本文件、统计行数/字符数/中文字数，并把行数写入语义记忆（代码式技能示例）",
+  "params": {
+    "path": "文本文件相对路径"
+  },
+  "triggers": [
+    "摘要"
+  ],
+  "sequence": []
+}
