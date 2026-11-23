@@ -1,0 +1,9 @@
+# 运行产物：数据库、轨迹、演示快照、临时目录
+data/*.sqlite3
+data/*.sqlite3-journal
+data/*.sqlite3-wal
+data/traces/
+data/demo_run/
+tests/_tmp/
+__pycache__/
+*.pyc
