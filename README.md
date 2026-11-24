@@ -12,7 +12,7 @@
 cd C10
 python -m brain.cli stats
 python demo/run_demo.py          # 10 幕演示，写 demo/RESULT.json
-python tests/test_brain.py       # 9 项回归断言
+python tests/test_brain.py       # 10 项回归断言
 ```
 
 `demo/run_demo.py` 的关键输出（本机实测）：
